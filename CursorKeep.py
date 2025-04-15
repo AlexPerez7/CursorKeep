@@ -6,6 +6,7 @@ import time
 import os
 import sys
 
+
 class MouseMoverApp:
     def __init__(self, root):
         self.root = root
@@ -25,21 +26,19 @@ class MouseMoverApp:
         self.status_label = tk.Label(root, text="Estado: Inactivo")
         self.status_label.pack()
 
-        self.progress_bar = ttk.Progressbar(root, orient="horizontal", length=250, mode="determinate")
+        self.progress_bar = ttk.Progressbar(
+            root, orient="horizontal", length=250, mode="determinate"
+        )
         self.progress_bar.pack(pady=15)
         self.progress_bar["maximum"] = self.intervalo
 
         self.signature_label = tk.Label(
-            root,
-            text="by AlexDev",
-            font=("Segoe UI", 9, "italic"),
-            fg="gray"
+            root, text="by AlexDev", font=("Segoe UI", 9, "italic"), fg="gray"
         )
         self.signature_label.pack(side="bottom", pady=5)
 
-
     def set_icon(self):
-        if getattr(sys, 'frozen', False):
+        if getattr(sys, "frozen", False):
             icon_path = os.path.join(sys._MEIPASS, "cursorkeep.ico")
         else:
             icon_path = "cursorkeep.ico"
@@ -67,8 +66,10 @@ class MouseMoverApp:
             if self.running:
                 pyautogui.moveRel(10, 0, duration=0.1)
                 pyautogui.moveRel(-10, 0, duration=0.1)
-                print("Cursor movido")
+                pyautogui.press("shift")  # Simula una tecla para evitar suspensión
+                print("Cursor movido y Shift presionado")
                 self.progress_bar["value"] = 0
+
 
 if __name__ == "__main__":
     root = tk.Tk()
