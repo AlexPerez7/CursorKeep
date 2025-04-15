@@ -1,0 +1,22 @@
+# Archivos generados por Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos generados por PyInstaller
+build/
+dist/
+*.spec
+
+# Archivos ejecutables
+*.exe
+
+# Archivos de entorno virtual (por si usas uno)
+env/
+venv/
+
+# Archivos del sistema o editor
+.DS_Store
+Thumbs.db
+*.log
