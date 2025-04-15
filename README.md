@@ -20,7 +20,7 @@ Desarrollado por **AlexDev** 👨‍💻
 
 ## 🖼️ Captura de pantalla
 
-![CursorKeep UI](assets/screenshots/screenshot-v1.0.0.png)
+![CursorKeep UI](assets/screenshots/Screenshot-v1.0.0.png)
 
 ---
 
