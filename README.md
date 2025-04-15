@@ -83,18 +83,3 @@ CursorKeep/
 
 **Versión actual:** `v1.0.0`  
 Publicado en [📄 Releases](https://github.com/AlexPerez7/CursorKeep/releases)
-
----
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo los términos de la licencia **MIT**.  
-Puedes usarlo, modificarlo o compartirlo libremente.
-
----
-
-## 👤 Autor
-
-**AlexDev**  
-📧 Contacto: [alexperez7.dev@gmail.com](mailto:alexperez7.dev@gmail.com)  
-🌐 GitHub: [@AlexPerez7](https://github.com/AlexPerez7)
