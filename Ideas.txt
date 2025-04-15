@@ -1,0 +1,18 @@
+🔧 Mejora visual
+Tipografía uniforme y más moderna
+Distribución más balanceada con padx y pady
+Separar mejor el grupo de controles
+Personalizar barra de progreso
+Colores suaves y coherentes (opcional)
+Ícono en la ventana + tooltip
+Modo Oscuro
+
+💡 Funcionalidades útiles que podrías agregar
+
+Funcionalidad	Qué hace
+⏱️ Mostrar cuenta regresiva	Mostrar XX segundos restantes en tiempo real
+🔔 Notificación visual	Mostrar una animación o flash cuando se mueve el cursor
+🔄 Guardar último intervalo	Recordar la última configuración seleccionada con configparser
+🔒 Modo anti-cierre	Preguntar al cerrar si el proceso está activo
+🕵️ Modo sigiloso	Minimizar a la bandeja del sistema (más avanzado con pystray)
+🌐 Multi-idioma	Opciones para cambiar entre español e inglés
