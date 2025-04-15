@@ -2,8 +2,6 @@
 
 **CursorKeep** es una aplicación ligera y portátil desarrollada en Python que mantiene tu equipo activo simulando movimientos periódicos del cursor. Ideal para evitar bloqueos automáticos de pantalla, suspensiones por inactividad o desconexiones en sesiones remotas.
 
-Desarrollado por **AlexDev** 👨‍💻
-
 ---
 
 ## 📦 Características
