@@ -20,7 +20,7 @@ Desarrollado por **AlexDev** 👨‍💻
 
 ## 🖼️ Captura de pantalla
 
-<img src="https://github.com/AlexPerez7/CursorKeep/assets/your_screenshot_placeholder" width="320" alt="UI de CursorKeep" />
+![CursorKeep UI](assets/screenshots/Screenshot-v1.0.0.png)
 
 ---
 
