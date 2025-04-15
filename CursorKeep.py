@@ -9,57 +9,56 @@ import sys
 
 class MouseMoverApp:
     def __init__(self, root):
-        # Configuración de ventana
+        # Configuración general de la ventana
         self.root = root
         self.root.title("CursorKeep")
-        self.root.geometry("300x260")
+        self.root.geometry("320x280")
         self.root.resizable(False, False)
 
         # Tipografías
         self.fuente = ("Segoe UI", 10)
         self.fuente_firma = ("Segoe UI", 9, "italic")
 
-        # Ícono
+        # Establecer ícono
         self.set_icon()
 
         # Estado e intervalo
         self.running = False
         self.intervalo_var = tk.IntVar(value=30)
 
-        # Botón Iniciar/Detener
+        # Frame principal para controles
+        frame_controles = tk.Frame(root)
+        frame_controles.pack(pady=10, padx=15, fill="x")
+
+        # Botón de inicio/detención
         self.btn_toggle = tk.Button(
-            root, text="Iniciar", font=self.fuente, width=20, command=self.toggle
+            frame_controles, text="Iniciar", font=self.fuente, width=20, command=self.toggle
         )
-        self.btn_toggle.pack(pady=(15, 10), padx=20)
+        self.btn_toggle.pack(pady=(0, 10))
 
-        # Etiqueta de estado
-        self.status_label = tk.Label(root, text="Estado: Inactivo", font=self.fuente)
-        self.status_label.pack(pady=5, padx=20)
+        # Estado del programa
+        self.status_label = tk.Label(frame_controles, text="Estado: Inactivo", font=self.fuente)
+        self.status_label.pack(pady=5)
 
-        # Menú de selección de intervalo
-        intervalo_frame = tk.Frame(root)
-        intervalo_frame.pack(pady=5, padx=20)
-
-        intervalo_label = tk.Label(
-            intervalo_frame, text="Intervalo (segundos):", font=self.fuente
-        )
-        intervalo_label.grid(row=0, column=0, sticky="w", padx=(0, 10))
+        # Frame para seleccionar el intervalo
+        frame_intervalo = tk.LabelFrame(frame_controles, text="Intervalo de movimiento", font=self.fuente)
+        frame_intervalo.pack(pady=5, fill="x", expand=True)
 
         intervalo_menu = ttk.Combobox(
-            intervalo_frame,
+            frame_intervalo,
             textvariable=self.intervalo_var,
             values=[30, 60, 120, 300],
             font=self.fuente,
             state="readonly",
             width=10,
         )
-        intervalo_menu.grid(row=0, column=1)
+        intervalo_menu.pack(padx=10, pady=10)
 
         # Barra de progreso
         self.progress_bar = ttk.Progressbar(
-            root, orient="horizontal", length=250, mode="determinate"
+            frame_controles, orient="horizontal", length=250, mode="determinate"
         )
-        self.progress_bar.pack(pady=15, padx=20)
+        self.progress_bar.pack(pady=15)
         self.progress_bar["maximum"] = self.intervalo_var.get()
 
         # Firma
