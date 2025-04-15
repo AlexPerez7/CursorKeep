@@ -1,8 +1,8 @@
 🔧 Mejora visual
-Tipografía uniforme y más moderna
-Distribución más balanceada con padx y pady
-Separar mejor el grupo de controles
-Personalizar barra de progreso
+Tipografía uniforme y más moderna ✔
+Distribución más balanceada con padx y pady ✔
+Separar mejor el grupo de controles ✔
+Personalizar barra de progreso ✔
 Colores suaves y coherentes (opcional)
 Ícono en la ventana + tooltip
 Modo Oscuro
