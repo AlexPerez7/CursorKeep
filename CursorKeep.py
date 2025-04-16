@@ -89,6 +89,14 @@ class MouseMoverApp:
         self.progress_bar.pack(pady=15)
         self.progress_bar["maximum"] = self.intervalo_var.get()
 
+        # Contador visual
+        self.contador_label = tk.Label(
+            frame_controles,
+            text="Próximo movimiento en: -",
+            font=self.fuente
+        )
+        self.contador_label.pack(pady=(0, 10))
+
         # Firma
         self.signature_label = tk.Label(
             root, text="by AlexDev", font=self.fuente_firma, fg="gray"
@@ -113,6 +121,7 @@ class MouseMoverApp:
             self.btn_toggle.config(text="Iniciar")
             self.status_label.config(text="Estado: Inactivo")
             self.progress_bar["value"] = 0
+            self.contador_label.config(text="Próximo movimiento en: -")
 
     def mover_cursor(self):
         while self.running:
@@ -123,6 +132,18 @@ class MouseMoverApp:
                 if not self.running:
                     break
                 self.progress_bar["value"] = i + 1
+                segundos_restantes = intervalo_actual - i
+
+                if segundos_restantes >= 60:
+                    minutos = segundos_restantes // 60
+                    segundos = segundos_restantes % 60
+                    tiempo = f"{minutos} min {segundos} s"
+                else:
+                    tiempo = f"{segundos_restantes} segundos"
+
+                self.contador_label.config(text=f"Próximo movimiento en: {tiempo}")
+                self.contador_label.update_idletasks()
+                self.progress_bar.update_idletasks()
                 time.sleep(1)
 
             if self.running:
@@ -131,6 +152,7 @@ class MouseMoverApp:
                 pyautogui.press("shift")
                 print("Cursor movido y Shift presionado")
                 self.progress_bar["value"] = 0
+                self.contador_label.config(text="Próximo movimiento en: -")
 
 
 if __name__ == "__main__":

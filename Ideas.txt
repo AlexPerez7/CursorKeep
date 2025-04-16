@@ -7,6 +7,12 @@ Colores suaves y coherentes (opcional)
 Ícono en la ventana + tooltip
 Modo Oscuro
 
+➕ Añadir borde redondeado	Para el botón y el frame (requiere usar ttk con estilos más avanzados)
+🎛 Combobox más moderno	Puedes usar ttk.Style() para personalizarlo al estilo "flat"
+🌗 Cambio de tema	Agregar un botón "☀️ / 🌙" para cambiar entre claro y oscuro
+💬 Tooltip opcional	Mostrar ayuda al pasar el cursor sobre el botón o la barra
+🪄 Animación sutil	Usar after() para animar la barra si quieres un loop visual más fluido
+
 💡 Funcionalidades útiles que podrías agregar
 
 Funcionalidad	Qué hace
